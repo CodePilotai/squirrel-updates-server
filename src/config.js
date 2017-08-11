@@ -6,7 +6,7 @@ export default {
     api: {
       version: '3.0.0',
       headers: {
-        'user-agent': 'Aluxian/squirrel-updates-server'
+        'user-agent': process.env.USER_AGENT
       },
       host: process.env.GITHUB_HOST,
       pathPrefix: process.env.GITHUB_PATH_PREFIX
@@ -15,8 +15,8 @@ export default {
   sentry: {
     dsn: process.env.SENTRY_DSN
   },
-  user: process.env.REPO_OWNER || 'Aluxian',
-  repo: process.env.REPO_NAME || 'Whatsie',
+  user: process.env.REPO_OWNER,
+  repo: process.env.REPO_NAME,
   privateRepo: process.env.UPDATES_PRIVATE_REPO || false,
   patterns: {
     darwin: {
