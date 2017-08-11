@@ -17,7 +17,7 @@ export default {
   },
   user: process.env.REPO_OWNER,
   repo: process.env.REPO_NAME,
-  privateRepo: process.env.UPDATES_PRIVATE_REPO || false,
+  privateRepo: process.env.UPDATES_PRIVATE_REPO || true,
   patterns: {
     darwin: {
       dmg: /-osx\.dmg/,
